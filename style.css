@@ -1,0 +1,227 @@
+body{
+    margin-top: 80px;
+    background-color: white;
+
+}
+
+header {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    width: 650px;
+    margin: 5px;
+}
+
+header h1
+{
+    margin-top: 10px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background-color: white;
+    width: 750px;
+    height: 550px;
+    border: 1px solid rgb(205, 157, 229);
+    border-radius: 10px;
+    justify-self: center;
+}
+.btn_addToDo
+{
+    background-color: whitesmoke;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 240px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    font-size: 40PX;
+    border: 1px;
+}
+.btn_addToDo:hover
+{
+    color: aqua;
+    background-color: rgb(83, 80, 80);
+    cursor: pointer;
+
+}
+
+.btn_addToDo:active
+{
+    background-color: rgb(156, 161, 161);
+}
+
+.frm_toDo
+{
+    border: 1p solid rgb(205, 87, 87);
+    background-color: rgba(232, 138, 23, 0.897);
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 230px;
+    height: 240px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    font-size: 40PX;
+    border: 1px;
+    justify-items: center;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.content_toDo
+{
+    margin-top: 10px;
+    background-color: aliceblue;
+    width: 210px;
+    height: 215px;
+    border-radius: 10px;
+}
+
+.btn_deleteToDo
+{
+    position: absolute;
+    display: flex;
+    margin-left: 190px;
+    margin-top: 170px;
+    justify-content: center;
+    align-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    border: 1px solid #1e92d0c9;
+    color: #1e92d0c9;
+}
+.btn_deleteToDo i
+{
+    margin-top: 8px;
+}
+.btn_deleteToDo:hover
+{
+    cursor: pointer;
+    background-color: rgb(81, 72, 72);
+    color: white;
+}
+.btn_deleteToDo:active
+{
+    background-color: rgb(233, 221, 221);
+}
+
+.total_toDo
+{
+    margin-top: 20px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: black;
+    transition-property: all;
+    transition-duration: 0.15s;
+}
+.total_filled_warning
+{
+    transition-property:all;
+    transition-duration: 0.2s;
+    font-size: 25px;
+    color: red;
+}
+
+.input_toDoGoal
+{
+    font-family: 'lucia Handwriting', cursive;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 6px;
+    width: 160px;
+    height: 30px; 
+    border-radius: 20px;
+    font-size: 18px;
+    border: 3px solid rgba(221, 146, 26, 0.364);
+    text-decoration: line-through;
+}
+
+.input_toDoGoal:focus, .item_toDo_input:focus
+{
+    outline: none;
+}
+
+.btn_addItem
+{
+    font-size: 15px;
+    margin: 5px;
+    color: rgb(137, 145, 215);
+}
+
+.btn_addItem:hover
+{
+    cursor: pointer;;
+    color: #a1d01ec9;
+}
+.btn_addItem:active
+{
+    cursor: pointer;;
+    color: #3ce2ddcb;
+}
+
+.items_toDo_container
+{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 155px;
+    margin-top: 8px;
+    margin-left: 3px;
+    border: 1px solid rgba(12, 210, 228, 0.364);
+    border-radius: 10px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.item_toDo
+{
+    margin-left: 5px ;
+    margin-top: 1px;
+    display: block;
+
+}
+
+.item_toDo_input
+{
+    field-sizing: content;
+    width: 120px;
+    min-height: 15PX;
+    border: 1px solid rgba(125, 218, 235, 0.364);
+    border-radius: 10px;
+    resize: none;
+    font-family: 'lucia Handwriting', cursive;
+    font-size: 10px;
+}
+
+.btn_deleteItem
+{
+    font-size: 10px;
+    color: #1e92d0c9;
+}
+.btn_deleteItem:hover
+{
+    color: #a1d01ec9;
+    cursor: pointer;
+}
+.btn_deleteItem:active
+{
+    color: #3ce2ddcb;
+}
+
+
+
+.item_toDo_chk
+{
+    width: 20px;
+    height: 20px;
+}
+
