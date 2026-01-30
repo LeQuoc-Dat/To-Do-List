@@ -53,8 +53,7 @@ function createToDo(event)
     {
     const item_toDo = document.createElement('div');
     item_toDo.classList.add("item_toDo");
-    const item_toDo_input = document.createElement('div');
-    item_toDo_input.contentEditable = 'true';
+    const item_toDo_input = document.createElement('textarea');
     item_toDo_input.classList.add("item_toDo_input");
     //item_toDo_input.style.textDecoration = 'line-through';
     //item_toDo_input.disabled ="true;"
@@ -72,25 +71,7 @@ function createToDo(event)
     const item_toDo_chck = document.createElement('input');
     item_toDo_chck.type = 'checkbox';
     item_toDo_chck.classList.add("item_toDo_chk");
-    // item_toDo_chck.addEventListener("click", 
-    //     (event) =>
-    //     {
-    //         const checkTarget = event.target.closest('textarea');
-    //         if(item_toDo_chck.checked)
-    //         {
-               
-    //             //checkTarget.disabled = "true";
-    //             console.log("checked" + checkTarget);
-    //         }
-    //         else
-    //         {
-    //             //checkTarget.disabled = "false";
-    //             console.log("unchecked");
-    //         }
-    //     }
-        
-            
-    // );
+    
 
     const btn_deleteItem = document.createElement('i');
     btn_deleteItem.innerHTML = '<i class="fa-solid fa-trash"></i>';
