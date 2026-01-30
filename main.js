@@ -28,6 +28,14 @@ function createToDo(event)
 
     const input_toDoGoal = document.createElement("input"); 
     input_toDoGoal.classList.add('input_toDoGoal');
+    input_toDoGoal.addEventListener("focusout", () =>
+    {
+        const items_text = input_toDoGoal.value.split(/\s+/)
+        const strip_items_text = items_text.filter(item =>item != "")
+        const merge_text = strip_items_text.join(' ');
+        input_toDoGoal.value = merge_text;
+    }
+)
 
     const items_toDo_container = document.createElement('div');
     items_toDo_container.classList.add('items_toDo_container');
@@ -45,37 +53,44 @@ function createToDo(event)
     {
     const item_toDo = document.createElement('div');
     item_toDo.classList.add("item_toDo");
-    const item_toDo_input = document.createElement('textarea');
-    item_toDo_input.cols = 12;
-    item_toDo_input.rows = 2;
+    const item_toDo_input = document.createElement('div');
+    item_toDo_input.contentEditable = 'true';
     item_toDo_input.classList.add("item_toDo_input");
-    //item_toDo_input.innerText = '234';
     //item_toDo_input.style.textDecoration = 'line-through';
     //item_toDo_input.disabled ="true;"
+    item_toDo_input.addEventListener("focusout",() =>
+    {
+        const items_text = item_toDo_input.value.split(/\s+/)
+        const strip_items_text = items_text.filter(item =>item != "")
+        const merge_text = strip_items_text.join(' ');
+        item_toDo_input.value = merge_text;
+    }
+            
+    )
 
 
     const item_toDo_chck = document.createElement('input');
     item_toDo_chck.type = 'checkbox';
     item_toDo_chck.classList.add("item_toDo_chk");
-    item_toDo_chck.addEventListener("click", 
-        (event) =>
-        {
-            const checkTarget = event.target.closest('textarea');
-            if(item_toDo_chck.checked)
-            {
+    // item_toDo_chck.addEventListener("click", 
+    //     (event) =>
+    //     {
+    //         const checkTarget = event.target.closest('textarea');
+    //         if(item_toDo_chck.checked)
+    //         {
                
-                //checkTarget.disabled = "true";
-                console.log("checked" + checkTarget);
-            }
-            else
-            {
-                //checkTarget.disabled = "false";
-                console.log("unchecked");
-            }
-        }
+    //             //checkTarget.disabled = "true";
+    //             console.log("checked" + checkTarget);
+    //         }
+    //         else
+    //         {
+    //             //checkTarget.disabled = "false";
+    //             console.log("unchecked");
+    //         }
+    //     }
         
             
-    );
+    // );
 
     const btn_deleteItem = document.createElement('i');
     btn_deleteItem.innerHTML = '<i class="fa-solid fa-trash"></i>';
@@ -86,7 +101,7 @@ function createToDo(event)
         removeTarget.remove();
     })
 
-    
+    //item_toDo_input.appendChild(item_toDo_chck);
     item_toDo.appendChild(item_toDo_input);
     item_toDo.appendChild(item_toDo_chck);
     item_toDo.appendChild(btn_deleteItem);

@@ -186,7 +186,7 @@ header h1
 .item_toDo
 {
     margin-left: 5px ;
-    margin-top: 1px;
+    margin-top: 5px;
     display: block;
 
 }
@@ -194,23 +194,23 @@ header h1
 .item_toDo_input
 {
     field-sizing: content;
-    width: 120px;
-    min-height: 15PX;
+    width: 165px;
+    min-height: 20PX;
     border: 1px solid rgba(125, 218, 235, 0.364);
     border-radius: 10px;
     resize: none;
     font-family: 'lucia Handwriting', cursive;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .btn_deleteItem
 {
-    font-size: 10px;
-    color: #1e92d0c9;
+    font-size: 15px;
+    color: #d49e1fc9;
 }
 .btn_deleteItem:hover
 {
-    color: #a1d01ec9;
+    color: #b3d1d0c9;
     cursor: pointer;
 }
 .btn_deleteItem:active
@@ -225,4 +225,5 @@ header h1
     width: 20px;
     height: 20px;
 }
+
 
