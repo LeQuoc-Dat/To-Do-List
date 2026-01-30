@@ -66,11 +66,23 @@ function createToDo(event)
     }
             
     )
-
-
     const item_toDo_chck = document.createElement('input');
     item_toDo_chck.type = 'checkbox';
     item_toDo_chck.classList.add("item_toDo_chk");
+    item_toDo_chck.addEventListener("click", ()=>
+    {
+        let textInput = item_toDo_input.value;
+        if (item_toDo_chck.checked)
+        {
+             console.log("check: " + textInput);
+             item_toDo_input.disabled = true;
+        }
+        else
+        {
+            console.log("uncheck: " + textInput);
+            item_toDo_input.disabled = false;
+        }
+    })
     
 
     const btn_deleteItem = document.createElement('i');

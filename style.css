@@ -145,7 +145,7 @@ header h1
     border: 3px solid rgba(221, 146, 26, 0.364);
 }
 
-.input_toDoGoal:focus, .item_toDo_input:focus
+.input_toDoGoal:focus
 {
     border-color: rgb(252, 252, 15);
     outline: none;
@@ -196,13 +196,23 @@ header h1
     field-sizing: content;
     width: 165px;
     min-height: 20PX;
-    border: 1px solid rgba(125, 218, 235, 0.364);
+    border: 1px solid rgb(235, 229, 229);
     border-radius: 10px;
     resize: none;
     font-family: 'lucia Handwriting', cursive;
     font-size: 18px;
 }
 
+.item_toDo_input:focus
+{
+    border: 1px solid rgba(158, 150, 150, 0.732);
+    outline: none;
+}
+
+.item_toDo_input:disabled
+{
+    text-decoration: line-through;
+}
 .btn_deleteItem
 {
     font-size: 15px;
