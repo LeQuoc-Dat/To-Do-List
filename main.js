@@ -5,10 +5,11 @@ const totalToDo = document.querySelector("#t_toDo");
 btn_addToDo.addEventListener("click", createToDo)
 
 let total = 0;
-
+let maxToDo = 5;
+totalToDo.textContent =`Total: ${total}/${maxToDo}`
 function createToDo(event)
 {
-    if (total === 5)
+    if (total >= maxToDo)
     {
         fillWarningEffect();
         return;
@@ -119,7 +120,7 @@ function deleteToDo(event)
 //update current total to-do on the list 
 function updateTotalToDo()
 {
-    totalToDo.textContent = `Total: ${total}/5`
+    totalToDo.textContent = `Total: ${total}/${maxToDo}`
 }
 function fillWarningEffect()
 {
